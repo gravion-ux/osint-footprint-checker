@@ -6,10 +6,9 @@ Scores the public footprint of an asset **you own** — security.txt,
 security headers, SPF/DMARC, dangling CNAMEs and TLS posture — from a JSON
 snapshot, and prints the fix for every finding.
 
-Applied coursework for Red Team Leaders OSINT study: the same public signals
-an OSINT analyst reads about a target are the signals you should audit on
-your own assets first. Snapshot-based and offline; it performs no probing
-of third-party systems.
+Applied coursework: the same public signals an OSINT analyst reads about a
+target are the signals you should audit on your own assets first.
+Snapshot-based and offline; it performs no probing of third-party systems.
 
 ## Install
 
