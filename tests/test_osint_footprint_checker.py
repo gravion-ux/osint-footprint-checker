@@ -27,3 +27,13 @@ def test_missing_security_txt_flagged():
 
 def test_old_tls_flagged():
     assert any(f.check == "TLS" for f in run_checks(BAD))
+
+def test_empty_snapshot_flags_missing_basics():
+    checks = {f.check for f in run_checks({})}
+    assert "security.txt" in checks
+    assert "SPF" in checks
+
+
+def test_score_is_bounded():
+    assert 0 <= score(run_checks({})) <= 100
+    assert 0 <= score(run_checks(GOOD)) <= 100
